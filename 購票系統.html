@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>購票系統</title>
+    <style>
+        #ticket {
+            font-size: 45px;
+        }
+        #logoONE {
+            position: fixed;
+            right: 0px;
+            bottom: 20px;
+            width: 400px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.192);">
+    <img id="logoONE" src="/小專/logo.png">
+
+    <div id="ticket">
+        <h2>請選擇要購買的電影票及時間</h2>
+        <div>
+            <label for="tvtv">電影選擇：</label>
+            <select style="width: 200px; height:50px; font-size: 25px;" id="tvtv">
+                <option value="0">請選擇電影</option>
+                <option value="1">复仇者联盟4</option>
+                <option value="2">流浪地球</option>
+                <option value="3">阿拉丁</option>
+            </select>
+        </div>
+        <div>
+            <label for="date">日期選擇：</label>
+            <input style="width: 200px; height:50px; font-size: 25px;" type="date" id="date" min="2023-05-03"
+                max="2023-06-15">
+        </div>
+        <div>
+            <label for="time">時間選擇：</label>
+            <select style="width: 200px; height:50px; font-size: 25px;" id="time">
+                <option value="0">請選擇時間</option>
+                <option value="1">10:00</option>
+                <option value="2">12:00</option>
+                <option value="3">14:00</option>
+                <option value="4">16:00</option>
+                <option value="5">18:00</option>
+                <option value="6">20:00</option>
+                <option value="7">22:00</option>
+            </select>
+        </div>
+        <div>
+            <label for="howmany">購買數量：</label>
+            <input style="font-size: 25px;" type="number" id="howmany" value="1" min="1" max="6">
+        </div>
+        <br>
+        <div>
+            <button style="width: 150px; height:50px; font-size: 35px;" id="buy">購買</button>
+        </div>
+    </div>
+
+    <script>
+        // 頁面元素
+        var tvtv = document.getElementById('tvtv'); //宣告電影選擇
+        console.log(tvtv);
+        var date = document.getElementById('date'); //宣告日期選擇
+        console.log(date);
+        var time = document.getElementById('time'); //宣告時間選擇
+        console.log(time);
+        var howmany = document.getElementById('howmany');  //宣告購買數量
+        console.log(howmany);
+        var buy = document.getElementById('buy');  //宣告購買的按鈕
+        console.log(buy);
+
+        // 定義票價
+        var price = {
+            1: 250, // 复仇者联盟4
+            2: 250, // 流浪地球
+            3: 200, // 阿拉丁
+        };console.log(price) 
+
+        // 購買按鈕點擊事件
+        buy.addEventListener('click', function () {
+            // 獲取選擇的電影、日期、時間、購買數量
+            var movieValue = tvtv.value;
+            var dateValue = date.value;
+            var timeValue = time.value;
+            var numValue = howmany.value;
+
+            // 計算總價
+            var totalPrice = price[movieValue] * numValue;
+
+            // 觸發按鈕顯示: 甚麼電影?、購買幾張?、總額多少元、選幾點的?
+            alert(`您選擇了${tvtv.options[tvtv.selectedIndex].text}，購買了${numValue}張票，總價為${totalPrice}元，時間為${dateValue} ${time.options[timeValue].text}。`);
+        });
+    </script>
+
+</body>
+
+</html>

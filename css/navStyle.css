@@ -1,0 +1,20 @@
+.navBar {
+    list-style-type: none;
+    text-align: center; /*文字置中*/
+    background-color: #000000;
+}
+
+.navBar li { /*這個元素裡面的li都會套用*/
+    display: inline-block; /*排版*/
+    padding: 20px; /*調整距離*/
+}
+
+.navBar li:hover { /*碰到li背景顏色會變*/
+    background-color: #656565;
+}
+
+.navBar li a { 
+    color: rgb(255, 255, 255); /*文字顏色*/
+    text-align: center; /*水平置中*/
+    text-decoration: none; /*底線消失*/
+}

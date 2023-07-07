@@ -1,0 +1,46 @@
+.outli ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 1px;
+    display: inline-block;
+    font-size: 1px;
+    text-align: left;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul {
+    display: inline;
+    margin: 0;
+    padding: 2px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li:hover {
+    color: red
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    width: 100px;
+    display: none;
+}
+
+ul li ul li {
+    background: black;
+    display: block;
+}
+
+ul li ul li:hover {
+    background: #f1efef;
+}
