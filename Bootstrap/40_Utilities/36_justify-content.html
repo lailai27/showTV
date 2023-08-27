@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a href="https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content">https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content</a></p>
+        <h4>Bootstrap Flex - Responsive Flex Classes (在最底下)</h4>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_flex.php">https://www.w3schools.com/bootstrap5/bootstrap_flex.php</a> </p>
+        <hr>
+
+        <!-- 先建立一組結構 -->
+        <div class="p-3 bg-secondary">
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+        </div>
+        <hr>
+        <!-- ** 請比較下列四種class ** -->
+        <!-- 10. .justify-content-* -->
+        <h1>.justify-content-xxxxx</h1>
+        <div class="d-flex justify-content-between p-3 bg-secondary">
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+        </div>
+        <hr>
+        <!-- 20. .align-items-* -->
+        <h1>.align-items-XXXXX</h1>
+        <div class="d-flex align-items-center p-3 bg-secondary"
+        style="height: 200px;">
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+        </div>
+        <hr>
+        <!-- 21. .align-self-* -->
+        <h1>.align-self-XXXXX</h1>
+        <div class="d-flex p-3 bg-secondary"
+             style="height: 200px;">
+            <div class="p-2 bg-info">itemA</div>
+            <div class="align-self-center p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+        </div>
+        <hr>      
+        <!-- 22. .align-content-*  -->
+        <h1>.align-content-XXXXX+flex-wrap自動換行</h1>
+        <div class="d-flex align-content-center flex-wrap p-3 bg-secondary"
+             style="height: 200px;">
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+            <div class="p-2 bg-info">itemA</div>
+            <div class="p-2 bg-success">itemB</div>
+            <div class="p-2 bg-warning">itemC</div>
+        </div>
+       
+    </div>
+
+</body>
+
+</html>

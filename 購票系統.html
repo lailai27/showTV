@@ -9,11 +9,17 @@
         #ticket {
             font-size: 45px;
         }
+
         #logoONE {
             position: fixed;
             right: 0px;
             bottom: 20px;
             width: 400px;
+        }
+
+        #back {
+            text-decoration: none;
+            color: black;
         }
     </style>
 
@@ -58,6 +64,7 @@
         <br>
         <div>
             <button style="width: 150px; height:50px; font-size: 35px;" id="buy">購買</button>
+            <button style="width: 150px; height:50px; font-size: 35px;"><a id="back" href="./index.html">返回</a></button>
         </div>
     </div>
 
@@ -79,7 +86,7 @@
             1: 250, // 复仇者联盟4
             2: 250, // 流浪地球
             3: 200, // 阿拉丁
-        };console.log(price) 
+        }; console.log(price)
 
         // 購買按鈕點擊事件
         buy.addEventListener('click', function () {

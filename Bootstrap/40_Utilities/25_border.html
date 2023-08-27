@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        .box {
+            height: 10vh;
+        }
+
+        .box>div {
+            display: inline-block;
+        }
+
+        div[class*='rounded'] {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/borders/">https://getbootstrap.com/docs/5.2/utilities/borders/</a>
+        </p>
+        <h4>Borders</h4>
+        <p><a
+                href="https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_util_borders&stacked=h">https://www.w3schools.com/bootstrap5/tryit.asp?filename=trybs_util_borders&stacked=h</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 為什麼這樣設定div不會出現? -->
+        <div class="w-25 h-100 bg-success">apple</div>
+        <hr>
+
+        <!-- 20. 複製貼上官網的範例，為什麼 border 測試不出來 -->
+        <span class="border">你好</span>
+        <span class="border-top">你好</span>
+        <span class="border-end">你好</span>
+        <span class="border-bottom">你好</span>
+        <span class="border-start">你好</span>
+        <hr>
+
+        <!-- 21. 設定不同的邊線顏色 -->
+        <span class="border border-primary">你好</span>
+        <span class="border-top border-primary">你好</span>
+        <hr>
+
+        <!-- 23. 調整 border 的寬度： border-N -->
+        <span class="border border-2">你好</span>
+        <span class="border border-3">你好</span>
+        <span class="border border-4">你好</span>
+        <span class="border border-5">你好</span>
+        <hr>
+
+        <!-- 25. 設定邊框圓角 -->
+        <!--     .rounded-top    | rounded-bottom  -->
+        <!--     .rounded-start  | rounded-end     -->
+        <!--     .rounded-circle | .rounded-pill   -->
+        <div class="box">
+            <div class="border border-5 rounded-top h-100"></div>
+            <div class="border border-5 rounded-start h-100"></div>
+            <div class="border border-5 rounded-circle h-100"></div>
+            <div class="border border-5 rounded-bottom h-100"></div>
+            <div class="border border-5 rounded-end h-100"></div>
+            <div class="border border-5 rounded-pill h-100"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
